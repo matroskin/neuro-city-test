@@ -1,0 +1,25 @@
+.slider.slick-slider {
+    margin: 0 auto;
+    width: 810px;
+}
+.slider .image {
+    margin: 5px;
+    outline: none;
+}
+.slider .image img {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+}
+
+.slider .slick-prev:before,
+.slider .slick-next:before {
+    color: #000;
+}
+.slider .slick-next {
+    right: 25px;
+}
+.slider .slick-prev {
+    left: 25px;
+    z-index: 1;
+}
