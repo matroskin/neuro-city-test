@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>task-7 - center block</title>
+    <style>
+        .js, .css {
+            padding: 10px;
+        }
+        .outer {
+            width: 500px;
+            height: 350px;
+            border: 1px solid green;
+        }
+        .inner {
+            width: 250px;
+            height: 150px;
+            border: 1px solid blue;
+        }
+
+        .css .outer {
+            position: relative;
+        }
+        .css .inner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <p>А) а с помощью JS.</p><br>
+    <div class="js">
+        <div class="outer">
+            <div class="inner"></div>
+        </div>
+    </div>
+
+    <p>Б) с помощью CSS.</p>
+    <div class="css">
+        <div class="outer">
+            <div class="inner"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+        $( document ).ready(function() {
+            var outer = $('.js .outer');
+            var inner = $('.js .inner');
+            
+            outer.css("position", "relative");
+            inner.css("position", "absolute");
+
+            inner.css("top", outer.height() / 2 - inner.height() / 2);
+            inner.css("left", outer.width() / 2 - inner.width() / 2);
+        });
+    </script>
+</body>
+</html>
