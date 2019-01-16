@@ -1,0 +1,9 @@
+.container {
+    padding: 10px;
+    position: relative;
+}
+span {
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+}
