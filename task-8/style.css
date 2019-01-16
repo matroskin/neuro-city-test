@@ -1,0 +1,37 @@
+.container {
+    padding: 10px;
+    position: relative;
+}
+.click {
+    display: inline-block;
+    padding: 5px;
+    background: #e2e2e2;
+    cursor: pointer;
+}
+.element {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    transition: opacity 1s ease-in-out;
+}
+.element.show {
+    opacity: 1;
+}
+.element.hide {
+    opacity: 0;
+}
+.elements .element:nth-child(1) {
+    top: 150px;
+    left: 250px;
+    background: green;
+}
+.elements .element:nth-child(2) {
+    top: 200px;
+    left: 550px;
+    background: blue;
+}
+.elements .element:nth-child(3) {
+    top: 350px;
+    left: 375px;
+    background: orange;
+}
